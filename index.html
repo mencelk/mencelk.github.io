@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
   <head>
     <meta charset="utf-8">
     <title>My website</title>
@@ -14,96 +14,157 @@
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
-    <header class="splash">
+    <nav class="navigation">
+      <div class="navigation-content">
+        <a href="#start">Start</a>
+        <a href="#about">O mnie</a>
+        <a href="#skills">Umiejętności</a>
+        <a href="#portfolio">Porfolio</a>
+      </div>
+    </nav>
+
+    <header class="splash" id="start">
       <div class="splash-inner">
         <div class="container">
           <i class="fas fa-code"></i>
-          <h1 class="page-title">Cześć, jestem Karol Mencel.</h1>
+          <h1 class="page-title">Nazywam się Karol Mencel</h1>
           <h2 class="page-subtitle">Uczę się front-endu</h2>
         </div>
       </div>
     </header>
+
     <section class="intro">
       <div class="container">
         <p>
-          You don't have to be great to start<br>
-          but you have to start to be great.
+          <q>You don't have to be great to start,<br>
+            but you have to start to be great.</q><br>
+            Zig Ziglar <br>
         </p>
       </div>
     </section>
-    <section class="about">
+
+    <section class="about" id="about">
       <div class="container">
         <h2 class="section-title">O mnie</h2>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua.<br>
-          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-          nisi ut aliquip ex ea commodo consequat.<br>
-          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
-          dolore eu fugiat nulla pariatur.<br>
-          Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
-          officia deserunt mollit anim id est laborum.
+          Jestem zapalonym programistą na początku kariery.
+          Nie od razu Rzym zbudowano, dlatego chętnie i cierpliwie zdobywam wiedzę oraz umiejętności potrzebne do tworzenia stron www.
+          Jako osoba, która szybko przyswaja zdobywaną wiedzę, liczę na solidnych mentorów, którzy pozwolą mi szybko rozwinąć skrzydła w dziedzinie tworzenia front-endu.
         </p>
       </div>
     </section>
-    <section class="skills">
+
+    <section class="skills" id="skills">
       <div class="container">
-        <h2 class="section-title">Co lubię robić</h2>
+        <h2 class="section-title">Moje umiejętności</h2>
         <ul>
           <li class="skill left">
             <div class="skill-image">
               <img
-                src="https://i.postimg.cc/NMsjbpp1/group-of-person-walking-in-mountain-1365425.jpg"
+                src="img/logo_html.png"
                 alt="image"
               >
             </div>
             <div class="skill-description">
-              <h3 class="skill-title">Wędrować po górach</h3>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat.
-              </p>
+              <p>Handlebars</p>
             </div>
           </li>
           <li class="skill right">
             <div class="skill-image">
               <img
-                src="https://i.postimg.cc/YqH8qFnJ/Dixit-game-0001.jpg"
+                src="img/logo_css.png"
                 alt="image"
               >
             </div>
             <div class="skill-description">
-              <h3 class="skill-title">Grać z przyjaciółmi w gry planszowe</h3>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat.
-              </p>
+              <p>Sass/SCSS, RWD, Bootstrap</p>
             </div>
           </li>
           <li class="skill left">
             <div class="skill-image">
               <img
-                src="https://i.postimg.cc/pdJR4zSR/forest-bike-bulls-100582.jpg"
+                src="img/logo_js.png"
                 alt="image"
               >
             </div>
             <div class="skill-description">
-              <h3 class="skill-title">Jeździć na rowerze</h3>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat.
-              </p>
             </div>
           </li>
         </ul>
       </div>
     </section>
+
+    <section class="portfolio" id="portfolio">
+      <div class="container">
+        <h2 class="section-title">Moje portfolio</h2>
+        <div class="projects">
+          <div class="project-box">
+            <h3 class="project-title">Website</h3>
+            <div class="project">
+              <div class="project-image">
+                <a href="https://mencelk.github.io/website/" target="_blank">
+                  <img src="img/website.jpg" alt="project website">
+                </a>
+              </div>
+              <div class="project-description">
+                <p>
+                  Projekt w oparciu o CSS z uwzględnieniem RWD
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-box">
+            <h3 class="project-title">Harbinger</h3>
+            <div class="project">
+              <div class="project-image">
+                <a href="https://mencelk.github.io/harbinger/" target="_blank">
+                  <img src="img/harbinger.jpg" alt="project harbinger">
+                </a>
+              </div>
+              <div class="project-description">
+                <p>
+                  Projekt w oparciu o Bootstrap z&nbsp;zastosowaniem RWD
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-box">
+            <h3 class="project-title">Golden</h3>
+            <div class="project">
+              <div class="project-image">
+                <a href="https://mencelk.github.io/golden/" target="_blank">
+                  <img src="img/golden.jpg" alt="project golden">
+                </a>
+              </div>
+              <div class="project-description">
+                <p>
+                  Projekt 
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-box">
+            <h3 class="project-title">Blog</h3>
+            <div class="project">
+              <div class="project-image">
+                <a href="https://mencelk.github.io/spa-blog" target="_blank">
+                  <img src="img/blog-spa.jpg" alt="project spa-blog">
+                </a>
+              </div>
+              <div class="project-description">
+                <p>
+                  Blog w JS w rozwiązaniu Single&nbsp;Page&nbsp;Application z użyciem handlebars
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <footer class="page-footer">
       <div class="container">
         <p>&copy; Karol Mencel. Wszystkie prawa zastrzeżone</p>
