@@ -48,7 +48,7 @@ section {
       align-items: right;
   top: 0;
   width: 100%;
-  z-index: 3;
+  z-index: 9;
 }
 
 .navigation-content {
@@ -233,7 +233,7 @@ section {
 }
 
 .project-image {
-  z-index: 8;
+  z-index: 7;
 }
 
 .project-image img {
@@ -274,7 +274,7 @@ section {
 
 .project:hover .project-description {
   transform: translate(35%, -50%);
-  z-index: 9;
+  z-index: 8;
   transition: all 1.5s ease-in-out, z-index 1.5s .5s;
 }
 
