@@ -233,15 +233,15 @@ section {
 }
 
 .project-image {
-  z-index: 2;
+  z-index: 8;
 }
 
-.project-image a img {
+.project-image img {
   width: 70%;
   transition: all 1.5s ease-in-out;
 }
 
-.project:hover .project-image a img {
+.project:hover .project-image img {
   transform: translate(-35%) scale(0.75, 0.75) rotate(-10deg);
 }
 
@@ -251,19 +251,39 @@ section {
   top: 50%;
   width: 30%;
   transform: translateY(-50%) scale(0.8, 0.8) rotate(-10deg);
+  z-index: 1;
   transition: all 1.5s ease-in-out;
 }
 
 .project-description p {
   font-size: 20px;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.project-description p a {
+  text-decoration: none;
+  color: #3d3d3d;
+}
+
+.project-description p a:hover {
+  color: #ff6600;
 }
 
 .project:hover .project-description {
   transform: translate(35%, -50%);
+  z-index: 9;
+  transition: all 1.5s ease-in-out, z-index 1.5s .5s;
 }
 
 /* Footer */
 .page-footer {
   background: #666;
+}
+
+.page-footer p {
+  margin: 0;
 }
 /*# sourceMappingURL=style.css.map */
