@@ -392,15 +392,30 @@ form * {
   margin: 0;
 }
 
-@media (max-width: 767px) {
-  body {
+@media (max-width: 600px) {
+  .page-title {
+    font-size: 38px;
+  }
+  .page-subtitle {
     font-size: 24px;
   }
-  .container {
-    padding: 0 40px;
+  .intro p {
+    width: 100%;
   }
-  .page-title {
-    font-size: 2em;
+  .skills .skill-description {
+    display: none;
+  }
+  .project-description {
+    width: 40%;
+  }
+  .project-description p {
+    font-size: .7em;
+  }
+  form {
+    margin: 0;
+  }
+  form input {
+    width: 97%;
   }
 }
 /*# sourceMappingURL=style.css.map */

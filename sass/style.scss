@@ -396,3 +396,42 @@ form {
     margin: 0;
   }
 }
+
+@media (max-width: 600px) {
+
+  .container {
+    // padding: 0 40px;
+  }
+
+  .page-title {
+    font-size: 38px;
+  }
+
+  .page-subtitle {
+    font-size: 24px;
+  }
+
+  .intro p {
+    width: 100%;
+  }
+
+  .skills .skill-description {
+    display: none;
+  }
+
+  .project-description {
+    width: 40%;
+
+    p {
+      font-size: .7em;
+    }
+  }
+
+  form {
+    margin: 0;
+  
+    input {
+      width: 97%;
+    }
+  }
+}
