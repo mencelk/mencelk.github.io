@@ -10,7 +10,7 @@ body {
   color: #3d3d3d;
   font-size: 16px;
   line-height: 1.7;
-  font-family: Cursive;
+  font-family: "PT Mono", monospace;
 }
 
 .container {
@@ -27,7 +27,7 @@ section {
   position: relative;
   font-size: 36px;
   margin: 0 0 60px 0;
-  font-family: "Amatic SC", cursive;
+  font-family: "Fira Code", monospace;
 }
 
 .section-title::after {
@@ -48,27 +48,65 @@ section {
       align-items: right;
   top: 0;
   width: 100%;
-  z-index: 9;
+  height: 46px;
+  z-index: 100;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: end;
+      justify-content: flex-end;
+  background-color: rgba(240, 240, 240, 0.7);
 }
 
-.navigation-content {
-  position: absolute;
-  right: 0;
+.navigation ul {
+  margin: 0 0 0;
+  padding: 0 10px 0 0;
 }
 
-.navigation-content a {
+.navigation-menu li {
   float: left;
   display: block;
-  color: #3d3d3d;
+  height: 40px;
   text-align: center;
-  margin: 14px 32px;
-  text-decoration: none;
+  margin: 5px 14px;
   font-size: 20px;
   font-weight: bolder;
 }
 
-.navigation-content a:hover {
+.navigation-menu li a {
+  text-decoration: none;
+  height: 16px;
+  color: #3d3d3d;
+}
+
+.navigation-menu li a:hover {
   color: #ff6600;
+}
+
+.navigation-icons li {
+  margin-top: 5px;
+  display: inline-block;
+  list-style: none;
+  width: 40px;
+  height: 40px;
+}
+
+.navigation-icons li a {
+  font-size: 0px;
+}
+
+.navigation-icons li a i {
+  font-size: 20px;
+  background: #ff6600;
+  width: 36px;
+  height: 36px;
+  line-height: 36px;
+  color: #fff;
+  border-radius: 50%;
+  transition: all .3s;
+}
+
+.navigation-icons li a i:hover {
+  transform: scale(1.1);
 }
 
 /* Splash */
@@ -104,6 +142,7 @@ section {
 }
 
 .splash-inner {
+  font-family: "Fira Code", monospace;
   position: absolute;
   width: 100%;
   top: 50%;
@@ -134,7 +173,7 @@ section {
   color: rgba(51, 51, 51, 0.8);
   text-shadow: 1px 1px 2px #808080;
   margin: 48px 0 0 0;
-  font-size: 18px;
+  font-size: 30px;
 }
 
 /* Intro */
@@ -165,15 +204,27 @@ section {
   list-style-type: none;
   margin: 0;
   padding: 0;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 
 .skills ul li {
+  display: -ms-flexbox;
+  display: flex;
   position: relative;
   height: 150px;
+  margin: 0;
+}
+
+.skills ul li div {
+  margin: auto;
 }
 
 .skill-image {
-  position: absolute;
   height: 100%;
   overflow: hidden;
 }
@@ -189,30 +240,12 @@ section {
 }
 
 .skill-description {
-  height: 100%;
+  position: relative;
 }
 
 .skill-description p {
+  margin: 0;
   font-size: 20px;
-}
-
-.skill.right .skill-image {
-  right: 50%;
-  transform: translateX(50%);
-}
-
-.skill.right .skill-description {
-  padding: 36px 58% 36px 0;
-  text-align: right;
-}
-
-.skill.left .skill-image {
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.skill.left .skill-description {
-  padding: 36px 0 36px 58%;
   text-align: left;
 }
 
@@ -233,7 +266,7 @@ section {
 }
 
 .project-image {
-  z-index: 7;
+  z-index: 98;
 }
 
 .project-image img {
@@ -274,8 +307,80 @@ section {
 
 .project:hover .project-description {
   transform: translate(35%, -50%);
-  z-index: 8;
-  transition: all 1.5s ease-in-out, z-index 1.5s .5s;
+  z-index: 99;
+  transition: all 1.5s ease-in-out, z-index 1.5s .3s;
+}
+
+/* Contact */
+form {
+  margin: 0 50px;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+form .submit-btn {
+  border: none;
+  margin: 20px auto auto;
+  width: 200px;
+  padding: 10px;
+  background: #ff6600;
+  border-radius: 5px;
+  font-family: "PT Mono", monospace;
+  font-size: 20px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+form input {
+  width: 47%;
+}
+
+form textarea {
+  width: 97%;
+  resize: none;
+}
+
+form * {
+  font-family: "PT Mono", monospace;
+  border: none;
+  padding: 25px 10px 10px;
+  border-bottom: 1px solid #ff6600;
+}
+
+.profiles-wrapper {
+  padding: 0;
+  margin-top: 60px;
+}
+
+.profiles-wrapper li {
+  margin: 0 10px;
+  display: inline-block;
+  list-style: none;
+  width: 50px;
+  height: 50px;
+}
+
+.profiles-wrapper li a {
+  font-size: 0px;
+}
+
+.profiles-wrapper li a i {
+  font-size: 25px;
+  background: #ff6600;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  color: #fff;
+  border-radius: 50%;
+  transition: all .3s;
+}
+
+.profiles-wrapper li a i:hover {
+  transform: scale(1.1);
 }
 
 /* Footer */
@@ -285,5 +390,17 @@ section {
 
 .page-footer p {
   margin: 0;
+}
+
+@media (max-width: 767px) {
+  body {
+    font-size: 24px;
+  }
+  .container {
+    padding: 0 40px;
+  }
+  .page-title {
+    font-size: 2em;
+  }
 }
 /*# sourceMappingURL=style.css.map */
