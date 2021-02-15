@@ -4,8 +4,8 @@ $color-main: #ff6600;
 $color-body: #3d3d3d;
 $color-footer: #666;
 $color-text-shadow: #808080;
-$font-text: 'Gupter', serif;
-$font-header: 'Amatic SC', cursive;
+$font-header: 'Fira Code', monospace;
+$font-text: 'PT Mono', monospace;
 
 /* Global */
 
@@ -20,7 +20,7 @@ body {
   color: $color-body;
   font-size: 16px;
   line-height: 1.7;
-  font-family: Cursive;
+  font-family: $font-text;
 }
 
 .container {
@@ -58,25 +58,62 @@ section {
   align-items: right;
   top: 0;
   width: 100%;
-  z-index: 9;
+  height: 46px;
+  z-index: 100;
+  display: flex;
+  justify-content: flex-end;
+  background-color: rgba($color-background-two, 0.7);
+  
+  ul {
+    margin: 0 0 0;
+    padding: 0 10px 0 0;
+  }
 }
 
-.navigation-content {
-  position: absolute;
-  right: 0;
+.navigation-menu li {
+  float: left;
+  display: block;
+  height: 40px;
+  text-align: center;
+  margin: 5px 14px;
+  font-size: 20px;
+  font-weight: bolder;
 
   a {
-    float: left;
-    display: block;
-    color: $color-body;
-    text-align: center;
-    margin: 14px 32px;
     text-decoration: none;
-    font-size: 20px;
-    font-weight: bolder;
+    height: 16px;
+    color: $color-body;
 
     &:hover {
       color: $color-main;
+    }
+  }
+}
+
+
+.navigation-icons li {
+  margin-top: 5px;
+  display: inline-block;
+  list-style: none;
+  width: 40px;
+  height: 40px;
+
+  a {
+    font-size: 0px;
+
+    i {
+      font-size: 20px;
+      background: $color-main;
+      width: 36px;
+      height: 36px;
+      line-height: 36px;
+      color: $color-background-one;
+      border-radius: 50%;
+      transition: all .3s;
+
+      &:hover {
+        transform: scale(1.1);
+      }
     }
   }
 }
@@ -115,6 +152,7 @@ section {
 }
 
 .splash-inner {
+  font-family: $font-header;
   position: absolute;
   width: 100%;
   top: 50%;
@@ -145,7 +183,7 @@ section {
   color: hsla(0, 0%, 20%, 0.8);
   text-shadow: 1px 1px 2px $color-text-shadow;
   margin: 48px 0 0 0;
-  font-size: 18px;
+  font-size: 30px;
 }
 
 /* Intro */
@@ -179,15 +217,23 @@ section {
   list-style-type: none;
   margin: 0;
   padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
 
   li {
+    display: flex;
     position: relative;
     height: 150px;
+    margin: 0;
+
+    div {
+      margin: auto;
+    }
   }
 }
 
 .skill-image {
-  position: absolute;
   height: 100%;
   overflow: hidden;
 
@@ -203,31 +249,12 @@ section {
 }
 
 .skill-description {
-  height: 100%;
+  position: relative;
 
-  p {
+  p {margin: 0;
     font-size: 20px;
+    text-align: left;
   }
-}
-
-.skill.right .skill-image {
-  right: 50%;
-  transform: translateX(50%);
-}
-
-.skill.right .skill-description {
-  padding: 36px 58% 36px 0;
-  text-align: right;
-}
-
-.skill.left .skill-image {
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.skill.left .skill-description {
-  padding: 36px 0 36px 58%;
-  text-align: left;
 }
 
 /* Portfolio */
@@ -247,7 +274,7 @@ section {
 }
 
 .project-image {
-  z-index: 7;
+  z-index: 98;
 
   img {
     width: 70%;
@@ -286,8 +313,78 @@ section {
 
 .project:hover .project-description {
   transform: translate(35%, -50%);
-  z-index: 8;
-  transition: all 1.5s ease-in-out, z-index 1.5s .5s;
+  z-index: 99;
+  transition: all 1.5s ease-in-out, z-index 1.5s .3s;
+}
+
+/* Contact */
+
+form {
+  margin: 0 50px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+
+  .submit-btn {
+    border: none;
+    margin: 20px auto auto;
+    width: 200px;
+    padding: 10px;
+    background: $color-main;
+    border-radius: 5px;
+    font-family: $font-text;
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 2px;
+  }
+
+  input {
+    width: 47%;
+  }
+
+  textarea {
+    width: 97%;
+    resize: none;
+  }
+
+  * {
+    font-family: $font-text;
+    border: none;
+    padding: 25px 10px 10px;
+    border-bottom: 1px solid $color-main;
+  }
+}
+
+.profiles-wrapper {
+  padding: 0;
+  margin-top: 60px;
+
+  li {
+    margin: 0 10px;
+    display: inline-block;
+    list-style: none;
+    width: 50px;
+    height: 50px;
+
+    a {
+      font-size: 0px;
+
+      i {
+        font-size: 25px;
+        background: $color-main;
+        width: 50px;
+        height: 50px;
+        line-height: 50px;
+        color: $color-background-one;
+        border-radius: 50%;
+        transition: all .3s;
+  
+        &:hover {
+          transform: scale(1.1);
+        }
+      }
+    }
+  }
 }
 
 /* Footer */

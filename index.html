@@ -2,33 +2,67 @@
 <html lang="pl">
   <head>
     <meta charset="utf-8">
-    <title>My website</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moja strona</title>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css"
     >
     <link
-      href="https://fonts.googleapis.com/css?family=Amatic+SC|Gupter&display=swap&subset=latin-ext"
+      href="https://fonts.googleapis.com/css2?family=Bangers&family=Fira+Code:wght@400;700&family=Itim&family=PT+Mono&family=Special+Elite&display=swap"
       rel="stylesheet"
+    >
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
     >
     <link rel="stylesheet" href="css/style.css">
   </head>
+
   <body>
     <nav class="navigation">
-      <div class="navigation-content">
-        <a href="#start">Start</a>
-        <a href="#about">O mnie</a>
-        <a href="#skills">Umiejętności</a>
-        <a href="#portfolio">Porfolio</a>
-      </div>
+      <ul class="navigation-menu">
+        <li>
+          <a href="#start">Start</a>
+        </li>
+        <li>
+          <a href="#about">O mnie</a>
+        </li>
+        <li>
+          <a href="#skills">Umiejętności</a>
+        </li>
+        <li>
+          <a href="#portfolio">Portfolio</a>
+        </li>
+        <li>
+          <a href="#contact">Kontakt</a>
+        </li>
+      </ul>
+      <ul class="navigation-icons">
+        <li>
+          <a href="https://github.com/mencelk" target="_blank">
+            github
+            <i class="fab fa-github"></i>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.linkedin.com/in/karol-wiktor-mencel-7938351ab/" target="_blank">
+            linkedin
+            <i class="fab fa-linkedin"></i>
+          </a>
+        </li>
+      </ul>
     </nav>
 
     <header class="splash" id="start">
       <div class="splash-inner">
         <div class="container">
           <i class="fas fa-code"></i>
-          <h1 class="page-title">Nazywam się Karol Mencel</h1>
-          <h2 class="page-subtitle">Uczę się front-endu</h2>
+          <h1 class="page-title">Nazywam się Karol&nbsp;Mencel</h1>
+          <h2 class="page-subtitle">Jestem front-end deweloperem</h2>
         </div>
       </div>
     </header>
@@ -48,8 +82,8 @@
         <h2 class="section-title">O mnie</h2>
         <p>
           Jestem zapalonym programistą na początku kariery.
-          Nie od razu Rzym zbudowano, dlatego chętnie i cierpliwie zdobywam wiedzę oraz umiejętności potrzebne do tworzenia stron www.
-          Jako osoba, która szybko przyswaja zdobywaną wiedzę, liczę na solidnych mentorów, którzy pozwolą mi szybko rozwinąć skrzydła w dziedzinie tworzenia front-endu.
+          Nie od razu Rzym zbudowano, dlatego chętnie i&nbsp;cierpliwie zdobywam wiedzę oraz umiejętności potrzebne do tworzenia stron www.
+          Jako osoba zdeterminowana na rozwój, która szybko przyswaja zdobywaną wiedzę, liczę na solidnych mentorów, którzy pozwolą mi szybko rozwinąć skrzydła w&nbsp;dziedzinie tworzenia front-endu.
         </p>
       </div>
     </section>
@@ -58,7 +92,7 @@
       <div class="container">
         <h2 class="section-title">Moje umiejętności</h2>
         <ul>
-          <li class="skill left">
+          <li class="skill">
             <div class="skill-image">
               <img
                 src="img/logo_html.png"
@@ -69,7 +103,7 @@
               <p>Handlebars</p>
             </div>
           </li>
-          <li class="skill right">
+          <li class="skill">
             <div class="skill-image">
               <img
                 src="img/logo_css.png"
@@ -77,17 +111,23 @@
               >
             </div>
             <div class="skill-description">
-              <p>Sass/SCSS, RWD, Bootstrap</p>
+              <p>Sass/SCSS, <br>RWD, <br>Bootstrap</p>
             </div>
           </li>
-          <li class="skill left">
+          <li class="skill">
             <div class="skill-image">
               <img
                 src="img/logo_js.png"
                 alt="image"
               >
             </div>
-            <div class="skill-description">
+          </li>
+          <li class="skill">
+            <div class="skill-image">
+              <img
+                src="img/logo_git.png"
+                alt="image"
+              >
             </div>
           </li>
         </ul>
@@ -98,6 +138,28 @@
       <div class="container">
         <h2 class="section-title">Moje portfolio</h2>
         <div class="projects">
+          <div class="project-box">
+            <h3 class="project-title">Blog</h3>
+            <div class="project">
+              <div class="project-image">
+                <img src="img/blog-spa.jpg" alt="project spa-blog">
+              </div>
+              <div class="project-description">
+                <p>
+                  Blog w JS w rozwiązaniu Single&nbsp;Page&nbsp;Application z użyciem handlebars
+                </p>
+                <p>
+                  <a href="https://mencelk.github.io/spa-blog/" target="_blank">
+                    <i class="fas fa-globe"></i> strona
+                  </a>
+                  <a href="https://github.com/mencelk/spa-blog" target="_blank">
+                    <i class="fab fa-github"></i> kod
+                  </a>
+                </p>
+              </div>
+            </div>
+          </div>
+
           <div class="project-box">
             <h3 class="project-title">Website</h3>
             <div class="project">
@@ -110,10 +172,10 @@
                 </p>
                 <p>
                   <a href="https://mencelk.github.io/website/" target="_blank">
-                    view live
+                    <i class="fas fa-globe"></i> strona
                   </a>
                   <a href="https://github.com/mencelk/website" target="_blank">
-                    view code
+                    <i class="fab fa-github"></i> kod
                   </a>
                 </p>
               </div>
@@ -124,7 +186,6 @@
             <h3 class="project-title">Harbinger</h3>
             <div class="project">
               <div class="project-image">
-                <!-- <a href="https://mencelk.github.io/harbinger/" target="_blank"> -->
                 <img src="img/harbinger.jpg" alt="project harbinger">
               </div>
               <div class="project-description">
@@ -133,10 +194,10 @@
                 </p>
                 <p>
                   <a href="https://mencelk.github.io/harbinger/" target="_blank">
-                    view live
+                    <i class="fas fa-globe"></i> strona
                   </a>
                   <a href="https://github.com/mencelk/harbinger" target="_blank">
-                    view code
+                    <i class="fab fa-github"></i> kod
                   </a>
                 </p>
               </div>
@@ -155,32 +216,10 @@
                 </p>
                 <p>
                   <a href="https://mencelk.github.io/golden/" target="_blank">
-                    view live
+                    <i class="fas fa-globe"></i> strona
                   </a>
                   <a href="https://github.com/mencelk/golden" target="_blank">
-                    view code
-                  </a>
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div class="project-box">
-            <h3 class="project-title">Blog</h3>
-            <div class="project">
-              <div class="project-image">
-                <img src="img/blog-spa.jpg" alt="project spa-blog">
-              </div>
-              <div class="project-description">
-                <p>
-                  Blog w JS w rozwiązaniu Single&nbsp;Page&nbsp;Application z użyciem handlebars
-                </p>
-                <p>
-                  <a href="https://mencelk.github.io/spa-blog/" target="_blank">
-                    view live
-                  </a>
-                  <a href="https://github.com/mencelk/spa-blog" target="_blank">
-                    view code
+                    <i class="fab fa-github"></i> kod
                   </a>
                 </p>
               </div>
@@ -190,10 +229,41 @@
       </div>
     </section>
 
+    <section class="contact" id="contact">
+      <div class="container">
+        <h2 class="section-title">Kontakt</h2>
+        <h3>Jeśli chcesz nawiązać kontakt, wyślij wiadomość</h3>
+        <form method="post" action="https://formspree.io/vooya84@gmail.com">
+          <input type="text" placeholder="Imię">
+          <input type="email" placeholder="Email">
+          <textarea name="message" placeholder="Wiadomości" cols="30" rows="8"></textarea>
+          <button type="submit" class="submit-btn">Wyślij</button>
+        </form>
+        <ul class="profiles-wrapper">
+          <li>
+            <a href="https://github.com/mencelk" target="_blank">
+              github
+              <i class="fab fa-github"></i>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/in/karol-wiktor-mencel-7938351ab/" target="_blank">
+              linkedin
+              <i class="fab fa-linkedin"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
     <footer class="page-footer">
       <div class="container">
-        <p>&copy; Karol Mencel. Wszystkie prawa zastrzeżone</p>
+        <p>&copy; 2020 Karol Mencel. Wszystkie&nbsp;prawa&nbsp;zastrzeżone</p>
       </div>
     </footer>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script src="js/emailform.js"></script>
+
   </body>
 </html>
